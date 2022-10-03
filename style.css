@@ -1,0 +1,564 @@
+/* importing google fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100h;
+    background-image: linear-gradient(rgba(195, 193, 196, 0.148), rgb(195, 193, 196, 0.148)), url(img/sfg3.jpg);
+    animation: bg-movement 20s linear infinite;
+}
+
+@keyframes bg-movement {
+    0% {
+        background-position: top left;
+    }
+    50% {
+        background-position: top right;
+    }
+    100% {
+        background-position: top left;
+    }
+}
+
+::selection {
+    background: url(img/fondo.jpg);
+}
+
+.start_btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.info_box {
+    font-family: 'Cardo', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+
+.quiz_box,
+.result_box {
+    font-family: 'Cinzel', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.info_box.activeInfo,
+.quiz_box.activeQuiz,
+.result_box.activeResult {
+    opacity: 1;
+    z-index: 5;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.start_btn button {
+    font-family: 'MedievalSharp', cursive;
+    font-weight: 700;
+    font-size: 50px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    cursor: pointer;
+    border: 3px solid;
+    padding: 0.25em 0.5em;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.nom {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    margin: auto;
+    text-align: center;
+    padding-top: 220px;
+    font-family: 'Metamorphous', cursive;
+    align-items: center;
+}
+
+.info_box {
+    width: 540px;
+    background: #fff;
+    border-radius: 5px;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.info_box .info-title {
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    border-radius: 5px 5px 0 0;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Metamorphous', cursive;
+    text-align: center;
+}
+
+.info_box .info-list {
+    padding: 15px 30px;
+    text-align: justify;
+    text-justify: inter-word;
+    font-weight: 600;
+}
+
+.info_box .info-list .info {
+    margin: 5px 0;
+    font-size: 17px;
+}
+
+.info_box .info-list .info span {
+    font-weight: 600;
+    color: #007bff;
+}
+
+.info_box .buttons {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 30px;
+    border-top: 1px solid lightgrey;
+}
+
+.info_box .buttons button {
+    font-family: 'MedievalSharp', cursive;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    cursor: pointer;
+    border: 3px solid;
+    padding: 0.25em 0.5em;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin: 0 5px;
+    height: 40px;
+    width: 100px;
+    outline: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.pueblo,
+.burguesia,
+.nobleza,
+.realeza {
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    margin: auto;
+    text-align: center;
+    padding-top: 20px;
+    font-family: 'Metamorphous', cursive;
+    text-shadow: 3px 3px #000000;
+}
+
+.pueblo .text2,
+.burguesia .text2,
+.nobleza .text2,
+.realeza .text2 {
+    font-size: 90px;
+    font-weight: 700;
+    color: #fff;
+    margin: auto;
+    text-align: center;
+    font-family: 'Metamorphous', cursive;
+    text-shadow: 3px 3px #000000;
+}
+
+.pueblo .text3,
+.burguesia .text3,
+.nobleza .text3,
+.realeza .text3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin: auto;
+    text-align: center;
+    font-family: 'Metamorphous', cursive;
+    text-shadow: 3px 3px #000000;
+}
+
+.pueblo img,
+.burguesia img,
+.nobleza img,
+.realeza img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    -webkit-filter: drop-shadow(5px 2px 5px rgb(0, 0, 0));
+    filter: drop-shadow(5px 2px 5px rgb(0, 0, 0));
+}
+
+.pueblo button,
+.burguesia button,
+.nobleza button,
+.realeza button,
+.buttons button.restart,
+.buttons button.quit {
+    font-family: 'MedievalSharp', cursive;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    cursor: pointer;
+    border: 3px solid;
+    padding: 0.25em 0.5em;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.buttons button.restart0 {
+    font-size: 14px;
+}
+
+.pueblo button:active,
+.burguesia button:active,
+.nobleza button:active,
+.realeza button:active,
+.start_btn button:active,
+.buttons button.quit:active,
+footer button:active,
+.buttons button.restart:active,
+.buttons button.quit:active {
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+}
+
+@media (min-width: 768px) {
+    .pueblo button,
+    .burguesia button,
+    .nobleza button,
+    .realeza button,
+    .start_btn button,
+    .buttons button.quit,
+    footer button,
+    .buttons button.restart,
+    .buttons button.quit {
+        padding: 0.25em 0.75em;
+    }
+}
+
+.quiz_box {
+    width: 550px;
+    background: #fff;
+    border-radius: 5px;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.quiz_box header {
+    position: relative;
+    z-index: 2;
+    height: 70px;
+    padding: 0 30px;
+    background: #fff;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.quiz_box header .title {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Metamorphous', cursive;
+    align-items: center;
+}
+
+section {
+    padding: 25px 30px 20px 30px;
+    background: #fff;
+}
+
+section .que_text {
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+section .option_list {
+    padding: 20px 0px;
+    display: block;
+}
+
+section .option_list .option {
+    background: rgb(244, 245, 247);
+    border: 1px solid #13181c47;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 17px;
+    font-weight: 550;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section .option_list .option:last-child {
+    margin-bottom: 0px;
+}
+
+section .option_list .option:hover {
+    color: #14141454;
+    background: #cce5ff;
+    border: 1px solid #b8daff;
+}
+
+section .option_list .option.correct {
+    color: #155724;
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+section .option_list .option.disabled {
+    pointer-events: none;
+}
+
+section .option_list .option .icon {
+    height: 26px;
+    width: 26px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 13px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    line-height: 24px;
+}
+
+.option_list .option .icon.tick {
+    color: #23903c;
+    border-color: #23903c;
+    background: #d4edda;
+}
+
+footer {
+    height: 60px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid lightgrey;
+}
+
+footer .total_que span {
+    display: flex;
+    user-select: none;
+}
+
+footer .total_que span p {
+    font-weight: 500;
+    padding: 0 5px;
+}
+
+footer .total_que span p:first-child {
+    padding-left: 0px;
+}
+
+footer button {
+    font-family: 'MedievalSharp', cursive;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    cursor: pointer;
+    border: 3px solid;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    height: 40px;
+    padding: 0 13px;
+    font-size: 15px;
+    outline: none;
+    border-radius: 5px;
+    line-height: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.95);
+    transition: all 0.3s ease;
+}
+
+footer button:hover {
+    background: #26282bb6;
+}
+
+footer button.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+
+.result_box {
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    padding: 25px 30px;
+    width: 450px;
+    flex-direction: column;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.result_box .icon {
+    font-size: 100px;
+    color: #34373a95;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.result_box .complete_text {
+    font-size: 40px;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.result_box .score_text span {
+    display: flex;
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: 800;
+    align-items: center;
+    justify-content: center;
+}
+
+.result_box .score_text span p {
+    display: flex;
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.result_box .score_text0 span p {
+    padding: 0 4px;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+}
+
+.result_box .score_text0 span {
+    display: flex;
+    margin: 10px 0;
+    font-size: 15px;
+    font-weight: 800;
+    text-decoration: underline;
+    align-items: center;
+    justify-content: center;
+}
+
+.result_box .score_text1 span,
+.result_box .score_text2 span,
+.result_box .score_text3 span,
+.result_box .score_text4 span {
+    display: flex;
+    margin: 10px 0;
+    font-size: 13px;
+    font-weight: 700;
+    color: #321167;
+}
+
+.result_box .score_text1 span p,
+.result_box .score_text2 span p,
+.result_box .score_text3 span p,
+.result_box .score_text4 span p {
+    padding: 0 4px;
+    font-size: 12;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+}
+
+.result_box .buttons {
+    display: flex;
+    margin: 20px 0;
+    align-items: center;
+}
+
+.result_box .buttons button {
+    margin: auto;
+    height: 45px;
+    padding: 0 20px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #31363bae;
+    transition: all 0.3s ease;
+    align-items: center;
+}
+
+.buttons button.restart {
+    color: #000000;
+    background: #fff;
+    align-items: center;
+    text-align: center;
+}
+
+.buttons button.restart:hover {
+    color: #00000080;
+    background: rgba(0, 0, 0, 0.353);
+}
+
+.buttons button.quit {
+    color: #000000;
+    background: #fff;
+    align-items: center;
+    text-align: center;
+}
+
+.buttons button.quit:hover {
+    color: #00000080;
+    background: rgba(0, 0, 0, 0.353);
+}

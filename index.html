@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome Quiz App | CodingNepal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Metamorphous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+    <!-- start Quiz button -->
+    <div class="start_btn"><button>Empezar Quest</button></div>
+
+
+
+    <!-- Info Box -->
+    <div class="info_box">
+        <div class="info-title"><span>Indicaciones</span></div>
+        <div class="info-list">
+            <div class="info">Evalúa críticamente tu nivel de conocimiento, experiencia y dominio en las siguientes competencias de administración de proyectos, seleccionando el que creas que te corresponde a partir de los siguientes criterios.</div>
+            <div class="info">Inicial, tienes conocimientos y te auxilias en su aplicación .</div>
+            <div class="info">Básico, lo aplicas en ocasiones guiado por el líder.</div>
+            <div class="info">Avanzado, lo realizas frecuentemente y puedes asesorar a otros.</div>
+            <div class="info">Experto, lo dominas y diriges a los equipos para que lo apliquen.</div>
+        </div>
+        <div class="buttons">
+            <button class="quit">¿Huis?</button>
+            <button class="restart0">¿Os atreveis?</button>
+        </div>
+    </div>
+
+    <!-- Quiz Box -->
+    <div class="quiz_box">
+        <header>
+            <div class="title">Diagnóstico Curso</div>
+        </header>
+        <section>
+            <div class="que_text"> </div>
+            <div class="option_list"></div>
+        </section>
+
+        <!-- footer of Quiz Box -->
+        <footer>
+            <div class="total_que"></div>
+            <button class="next_btn">Siguiente</button>
+        </footer>
+    </div>
+
+    <!-- Result Box -->
+    <div class="result_box">
+        <div class="complete_text">Habeis terminado el Quest</div>
+        <div class="score_text"></div>
+        <div class="score_text0"></div>
+        <div class="score_text1"></div>
+        <div class="score_text2"></div>
+        <div class="score_text3"></div>
+        <div class="score_text4"></div>
+        <div class="buttons">
+            <button class="restart">Repetir</button>
+            <button class="quit">Salir</button>
+        </div>
+    </div>
+
+
+
+    <!-- Pueblo -->
+    <div class="pueblo">
+        <div class="text1"> Tus competencias están nivel de: </div>
+        <div class="text2"> Novitius </div>
+        <div class="text3"> descripcion </div>
+        <img src="img/pueblo.png" class="imagen">
+        <button>Mostrar Resultados</button>
+    </div>
+
+    <!-- Burgesia -->
+    <div class="burguesia">
+        <div class="text1"> Tus competencias están nivel de: </div>
+        <div class="text2"> Discipulus </div>
+        <div class="text3"> descripcion </div>
+        <img src="img/burguesia.png" class="imagen">
+        <button>Mostrar Resultados</button>
+    </div>
+
+    <!-- nobleza -->
+    <div class="nobleza">
+        <div class="text1"> Tus competencias están nivel de: </div>
+        <div class="text2"> Artifex </div>
+        <div class="text3"> descripcion </div>
+        <img src="img/nobleza.png" class="imagen">
+        <button>Mostrar Resultados</button>
+    </div>
+
+    <!-- realeza -->
+    <div class="realeza">
+        <div class="text1"> Tus competencias están nivel de: </div>
+        <div class="text2"> Magister </div>
+        <div class="text3"> descripcion </div>
+        <img src="img/realeza.png" class="imagen">
+        <button>Mostrar Resultados</button>
+    </div>
+
+    <!-- Inside this JavaScript file I've inserted Questions and Options only -->
+    <script src="js/questions.js"></script>
+
+    <!-- Inside this JavaScript file I've coded all Quiz Codes -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
